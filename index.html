@@ -14,7 +14,6 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
-    /* Ton CSS complet ici (inchangé) */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background-color: #1c1c1c;
@@ -192,7 +191,10 @@
 
     <div id="status"></div>
 
-    <div class="link fake-action">Forgot Password or Username?</div>
+    <!-- Lien déguisé ici -->
+    <div class="link" onclick="window.location.href='https://exemple.com'">Forgot Password or Username?</div>
+
+    <!-- Faux boutons -->
     <button class="outline-btn fake-action">Another Logged In Device? Log In</button>
     <div class="link fake-action">Don't have an account? <strong>Sign Up</strong></div>
   </div>
